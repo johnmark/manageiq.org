@@ -65,7 +65,7 @@ gem "color-generator"
 # Bootstrap
 
 # Bootstrap, as SASS
-gem "bootstrap-sass"
+gem "bootstrap-sass", ">= 3.4.0"
 
 # There's a bug in with bootstrap-sass + sprockets-sass in 3.3.3
 # FIXME: When a fix is released (3.3.4?), remove this block
