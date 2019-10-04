@@ -46,7 +46,7 @@ gem 'middleman-piwik'
 gem "middleman-favicon-maker"
 
 # HTML & XML parsing smarts
-gem "nokogiri"
+gem "nokogiri", ">= 1.8.3"
 
 # Syntax highlighting
 gem "middleman-syntax"
