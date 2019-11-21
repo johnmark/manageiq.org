@@ -123,14 +123,14 @@ GEM
     middleman-syntax (2.0.0)
       middleman-core (~> 3.2)
       rouge (~> 1.0)
-    mini_portile (0.6.0)
+    mini_portile2 (2.4.0)
     minitest (5.3.5)
     multi_json (1.10.1)
     net-sftp (2.1.2)
       net-ssh (>= 2.6.5)
     net-ssh (2.9.1)
-    nokogiri (1.6.2.1)
-      mini_portile (= 0.6.0)
+    nokogiri (1.10.5)
+      mini_portile2 (~> 2.4.0)
     oj (2.9.6)
     open-uri-cached (0.0.4)
     padrino-helpers (0.12.2)
@@ -216,7 +216,7 @@ DEPENDENCIES
   middleman-pry
   middleman-sprockets (= 3.3.2)
   middleman-syntax
-  nokogiri
+  nokogiri (>= 1.10.5)
   oj
   open-uri-cached
   pry
@@ -227,3 +227,6 @@ DEPENDENCIES
   therubyracer
   wdm (~> 0.1.0)
   wikicloth
+
+BUNDLED WITH
+   1.17.3
