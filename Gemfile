@@ -2,20 +2,20 @@
 # the following line to use "https"
 source 'http://rubygems.org'
 
-gem "middleman", "~> 3.3.3"
+gem "middleman", "~> 4.3.7"
 
 # In order to get SASS 3.3, compass 1.0 is needed
 # FIXME: Remove this once 1.0 is final (very, very soon now -- next week?)
 gem 'compass', '~> 1.0.0.alpha.19'
 
 # Live-reloading plugin
-gem "middleman-livereload"
+gem "middleman-livereload", ">= 3.4.1"
 
 # Debugger / REPL alternative to irb
 gem 'pry'
 gem 'pry-debugger'
 gem 'pry-stack_explorer'
-gem 'middleman-pry'
+gem 'middleman-pry', '>= 0.0.3'
 
 # Cross-templating language block fix for Ruby 1.8
 platforms :mri_18 do
@@ -30,11 +30,11 @@ gem "wdm", "~> 0.1.0", :platforms => [:mswin, :mingw]
 # General plugins
 
 # Blog plugin
-gem "middleman-blog"
+gem "middleman-blog", ">= 4.0.0"
 #gem "middleman-blog-drafts"
 #gem "middleman-blog-authors"
 
-gem 'middleman-deploy'
+gem 'middleman-deploy', '>= 0.2.4'
 
 # Piwik tracker
 gem 'middleman-piwik'
@@ -43,13 +43,13 @@ gem 'middleman-piwik'
 #gem "middleman-thumbnailer", github: "nhemsley/middleman-thumbnailer"
 
 # favicon support (favicon PNG should be 144×144)
-gem "middleman-favicon-maker"
+gem "middleman-favicon-maker", ">= 3.7"
 
 # HTML & XML parsing smarts
 gem "nokogiri"
 
 # Syntax highlighting
-gem "middleman-syntax"
+gem "middleman-syntax", ">= 2.1.0"
 
 # For feed.xml.builder
 gem "builder", "~> 3.0"
@@ -94,4 +94,4 @@ gem "kramdown"
 
 gem 'open-uri-cached'
 
-gem 'font-awesome-middleman'
+gem 'font-awesome-middleman', '>= 4.1.1'
