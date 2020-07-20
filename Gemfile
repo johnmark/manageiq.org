@@ -90,7 +90,7 @@ gem "coderay"
 gem "stringex"
 
 # Markdown
-gem "kramdown"
+gem "kramdown", ">= 2.3.0"
 
 gem 'open-uri-cached'
 
