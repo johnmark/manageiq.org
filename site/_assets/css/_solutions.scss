@@ -1,0 +1,96 @@
+$solution_pad: 4em;
+
+.solutions {}
+
+.solution-container {
+  @include container-fixed(0);
+  display: flex;
+  max-width: 100%;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.solution {
+  padding: 2em 1em;
+}
+
+.solution-left {
+  background-color: #fff;
+
+  .solution-img {
+    margin-right: 1em;
+  }
+}
+
+.solution-right {
+  .solution-img {
+    margin-left: 1em;
+  }
+}
+
+.solution-img {
+  width: 50px;
+  height: 50px;
+
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.solution-content {
+  flex: 1;
+  max-width: 16em;
+}
+
+.solution-title {
+  margin: 0 0 13px 0;
+}
+
+.solution-text {
+  font-size: 12px;
+  color: lighten($text-black, 10%);
+}
+
+@media only screen and (min-width: #{$bp-desk0}) {
+  .solutions {
+    border-bottom: none;
+    margin-bottom: 0;
+  }
+
+  .solution-container {
+    max-width: $hg-container-desktop;
+    align-items: center;
+  }
+
+  .solution {
+    padding: $solution_pad 0;
+  }
+
+  .solution-left {
+    .solution-img {
+      margin-right: $solution_pad;
+    }
+  }
+
+  .solution-right {
+    .solution-img {
+      margin-left: $solution_pad;
+    }
+  }
+
+  .solution-img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .solution-content {
+    width: $hg-container-desktop - 125px;
+    max-width: 40em;
+  }
+
+  .solution-text {
+    font-size: 16px;
+  }
+}

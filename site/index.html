@@ -1,0 +1,63 @@
+---
+layout: default
+body_class: home
+---
+
+<div class="page" id="home">
+  <div class="banner" id="home_banner">
+    <div class="banner-content">
+      <h1>Discover, Optimize, and Control your Hybrid IT</h1>
+      <h2>
+        Manage containers, virtual machines, networks,
+        and storage from a single platform
+      </h2>
+    </div>
+    <div class="banner-logo"></div>
+  </div>
+
+  {% include triad.html %}
+
+  <section class="download">
+    <h4>
+      <a href="/download/">
+        <span>Or download one of our virtual appliances</span>
+        <i class="fa fa-arrow-right"></i>
+      </a>
+    </h4>
+  </section>
+
+  {% include solutions.html %}
+
+  <section class="platforms">
+    <h3 class="section-title">
+      Supported Platforms
+    </h3>
+
+    <div class="platforms-container">
+      {% for platform in site.data.platforms %}
+      <div id="platform_{{platform.id}}" class="platform_brand">
+        <img src="{{platform.img}}" alt="{{platform.name}}">
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  {% include features.html %}
+
+  <section class="partners">
+    <h3 class="section-title partners-title">
+      Brought to you by
+    </h3>
+
+    <div class="partners-container">
+      {% for partner in site.data.partners %}
+      <div class="partner">
+        <img
+          src="/assets/images/partners/{{partner.name}}.svg"
+          alt="{{ partner.name | replace: '_', ' ' }}"
+          width="{{ partner.width }}" >
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+</div>

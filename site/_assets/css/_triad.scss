@@ -1,0 +1,126 @@
+
+.triad {
+  max-width: 90%;
+  @include container-fixed(0);
+}
+
+.triad-heading {
+  line-height: 1.3;
+  margin: 2em auto;
+  max-width: 18em;
+}
+
+.triad-item {
+  display: flex;
+  align-items: center;
+  height: 4em;
+  border-bottom: 1px solid $heading-line;
+}
+
+.triad-col:last-child .triad-item {
+  border-bottom: none;
+}
+
+.triad-logo {
+  width: 70px;
+  margin-right: 1em;
+}
+
+.triad-title {
+  flex: 1;
+}
+
+.download {
+  padding: 1em 0;
+  border-top: 1px solid $heading-line;
+  border-bottom: 1px solid $heading-line;
+
+  h4 {
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: #{$bp-desk0}) {
+  .triad {
+    display: block;
+    max-width: $hg-container-desktop;
+
+    padding-bottom: 60px;
+
+    position: relative;
+    top: $triad-offset;
+
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.25);
+  }
+
+  .triad-heading {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1;
+    margin: 0 auto;
+    padding: 30px;
+    max-width: 100%;
+  }
+
+  .triad-col {
+    @include make-md-column(4, $triad-gutter);
+
+    border-right: 1px solid $grey-lite;
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+
+  .triad-item {
+    display: block;
+    border-bottom: none;
+    height: auto;
+  }
+
+  .triad-logo {
+    width: auto;
+    height: 150px;
+    margin: 0 auto;
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+  }
+
+  .triad-title {
+    text-align: center;
+    font-size: 18px;
+    line-height: 1;
+    padding: 24px 0;
+  }
+
+  .triad-vagrant {
+    width: 150px;
+  }
+
+  .triad-cloud {
+    width: 180px;
+  }
+
+  .triad-docker {
+    padding-top: 15px;
+    width: 200px;
+  }
+
+  .triad-button {
+    text-align: center;
+
+    .btn {
+      display: block;
+    }
+  }
+
+  .download {
+    position: relative;
+    top: ($triad-offset / 2);
+    border: none;
+  }
+} // @media

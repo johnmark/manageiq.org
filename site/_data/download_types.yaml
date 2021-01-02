@@ -1,0 +1,52 @@
+- name: Amazon AWS EC2
+  download_platform: ec2
+  ext: zip
+
+- name: Docker
+  download_platform: docker
+
+- name: Google Cloud Platform
+  download_platform: gce
+  ext: tar.gz
+
+- name: Kubernetes
+  download_platform: podified
+
+- name: libvirt
+  download_platform: libvirt
+  ext: qc2
+
+- name: Microsoft Azure
+  download_platform: azure
+  ext: zip
+
+- name: Microsoft SCVMM
+  download_platform: hyperv
+  ext: zip
+
+- name: OpenShift
+  download_platform: podified
+
+- name: OpenStack
+  download_platform: openstack
+  ext: qc2
+
+- name: oVirt
+  download_platform: ovirt
+  ext: qc2
+
+- name: QEmu/KVM
+  download_platform: openstack
+  ext: qc2
+
+- name: Red Hat Virtualization
+  download_platform: ovirt
+  ext: qc2
+
+- name: Vagrant
+  download_platform: vagrant
+  ext: box
+
+- name: VMware vSphere
+  download_platform: vsphere
+  ext: ova

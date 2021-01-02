@@ -1,82 +1,68 @@
-# ManageIQ website
+# ManageIQ.org website
 
-## Step 1: Check it out
+This is primarily a [Jekyll](https://github.com/jekyll/jekyll) site, with some tools to collect and pre-process documentation from multiple sources.
 
-Check out this this git repository by running:
-`git clone git@github.com:ManageIQ/manageiq.org.git`
+## How To Contribute
 
-When the git clone is done, run `cd manageiq.org` to change to the
-checked out directory.
+In general:
 
-## Step 2: Set it up
+1. Fork this repo
+2. Create a feature branch
+3. Submit a pull request
 
-Make sure you have `sudo` rights on your computer running Fedora, RHEL,
-or CentOS.
+The site content has different sources.
 
-Once you do, simply run `./setup.sh`.
+### Source Overview
 
-## Step 3: Run a local server
-
-1. Type `./run-server.sh`
-
-2. Next, browse to <http://0.0.0.0:4567>
-
-3. Edit!
-
-   When you edit files (pages, layouts, CSS, etc.), the site will
-   dynamically update in development mode. (There's no need to refresh
-   the page, unless you get a Ruby error.)
-
-Since it's already set up at this point, all you need to do is repeat
-change to the correct directory and run step 3 every time you want to
-start the server.
+| Directory | Contents |
+| --------- | -------- |
+| dest      | where the site is built locally |
+| exe       | Command line tool (Thor) |
+| lib       | Ruby code for CLI, processing docs, etc. |
+| site      | Site content |
+| test      | Tests for Ruby code |
 
 
-## Customizing your site
+### Documentation groups
 
-The site can be easily customized by editing `data/site.yml`.
+The documentation for ManageIQ comes from several sources which are continuously improved.
+Contributions are welcome to each of these, here's where you can help:
 
+#### Getting started
+Docs in the getting started group are part of this repo, find them under [site/docs/get-started](/site/docs/get-started)
 
-## Adding a Post
+#### User reference
+The user reference docs are hosted at https://github.com/ManageIQ/manageiq-documentation. They are written in [Asciidoc](http://asciidoc.org/) and organized in [AsciiBinder](http://www.asciibinder.org/) By default they are built in a temp directory and copied (rsync) to `/site/docs/reference/latest`.
 
-To add a post to the community blog (or any blog managed by middleman) use:
+#### API Docs
+The API Docs are hosted in the same repo as the User Reference, [under the api directory](https://github.com/ManageIQ/manageiq-documentation/tree/master/api)
+
+#### Developer Guides
+These guides describe how to work with and contribute to the source code of ManageIQ itself. They are found in this repo: https://github.com/ManageIQ/guides.
+
+Before the Jekyll site is built, YAML front matter is added to each page of the guides, if that page does not already have it.
+
+Currently this is included as a Git submodule.
+
+#### Automation book
+[Peter McGowan](https://github.com/pemcg) is working on a book covering the Automation features of ManageIQ. You can find the source for that book here: https://github.com/pemcg/mastering-automation-in-cloudforms-and-manageiq. However, this content is hosted on Gitbook and only linked to from the site.
+
+### Working Locally
+
+`$ exe/miq`
 
 ```
-bundle middleman article TITLE
+miq build <all|guides|site|reference>   # Build or process an aspect of the site
+miq help [COMMAND]                      # Describe available commands or one specific command
+miq reset <all|guides|site|reference>   # Reset repo(s) to clean state
+miq serve                               # Does Jekyll serve with appropriate args
+miq update <all|guides|site|reference>  # Pull changes from origin repos
 ```
 
+### Working with large images
 
-## Build your static site
+Images (img) in documents and blog posts should be "responsive" by default, that is their width should not exceed the width of their container. Add the `.large_img` class to give large images zoomability.
 
-After getting it how you want, you can build the static site by running:
-
-`bundle exec middleman build`
-
-(If you have middleman in your path, you can just run `middleman build`.)
-
-
-## Deploying
-
-### Setting up deployment
-
-FIXME: Right now, please reference <data/site.yml>
-
-### Actual deployment
-
-After copying your public key to the remote server and configuring your
-site in <data/site.yml>, deployment is one simple command:
-```
-bundle exec middleman deploy
-```
-
-
-### Add new features (parsers, etc.)
-
-Simply add a new `gem 'some-gem-here'` line in the `Gemfile` and run
-`bundle install`
-
-
-## More info
-
-For more information, please check the excellent
-[Middleman documentation](http://middlemanapp.com/getting-started/).
+### Questions / Suggestions?
+* Chat: https://gitter.im/ManageIQ/manageiq.org
+* Forum: http://talk.manageiq.org/c/website

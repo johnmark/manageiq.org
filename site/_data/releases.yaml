@@ -1,0 +1,20 @@
+stable:
+  type: stable
+  name: Jansa-2
+  tag: jansa-2
+  filename: jansa-2
+  branch: jansa
+
+# prerelease:
+#   type: prerelease
+#   name: Jansa-1-rc2
+#   tag: jansa-1-rc2
+#   filename: jansa-1-rc2
+#   branch: jansa
+
+devel:
+  type: devel
+  name: Nightly
+  tag: latest
+  filename: devel
+  branch: master

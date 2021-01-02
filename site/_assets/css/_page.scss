@@ -1,0 +1,54 @@
+body {
+  background-color: $site-bg;
+  border-top: 3px solid $blue-lite;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+.home_container {
+  max-width: 867px;
+  @include container-fixed(0);
+}
+
+.flex_container {
+  display: flex;
+  justify-content: center;
+}
+
+main img {
+  @include responsive_img;
+}
+
+.gsc-control-cse {
+  padding: 0 !important;
+  td {
+    padding: 0 5px 0 0 !important;
+  }
+  table tr:nth-child(odd) td {
+    background-color: transparent !important;
+  }
+}
+
+table.gsc-input { 
+  background-color: transparent;
+  font-size: 9px !important;
+  height: 28px !important;
+  margin: 2px 0 0 5px !important;
+}
+
+.gsst_a .gscb_a {color: #292e33 !important} // 
+
+.gsc-search-button-v2 {
+  background: none !important;
+  border: none !important;
+  padding: 6px !important;
+  svg {
+    width: 16px !important;
+    height: 16px !important;
+  }
+}

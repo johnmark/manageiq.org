@@ -1,0 +1,48 @@
+
+<section class="triad">
+  <h3 class="triad-heading section-title">
+    Take 30 minutes to get started with the {{ site.data.releases['stable'].name }} Release
+  </h3>
+
+  <div class="triad-col">
+    <div class="triad-item">
+      <div class="triad-logo triad-vagrant">
+        <img src="{{ site.image_path }}/try_vagrant.svg" alt="Try ManageIQ on Vagrant" />
+      </div>
+      <div class="triad-title">Vagrant</div>
+      <div class="triad-button">
+        <a href="/docs/get-started/vagrant" class="btn btn-primary" onClick="ga('send', 'event', { eventCategory: 'Getting Started', eventAction: 'triadclick', eventLabel: 'Vagrant', transport: 'beacon' });">
+          Try It!
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="triad-col">
+    <div class="triad-item">
+      <div class="triad-logo triad-docker">
+        <img src="{{ site.image_path }}/try_docker.svg" alt="Try ManageIQ on Docker" />
+      </div>
+      <div class="triad-title">Docker</div>
+      <div class="triad-button">
+        <a href="/docs/get-started/docker" class="btn btn-primary" onClick="ga('send', 'event', { eventCategory: 'Getting Started', eventAction: 'triadclick', eventLabel: 'Docker', transport: 'beacon' });">
+          Try It!
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="triad-col">
+    <div class="triad-item">
+      <div class="triad-logo triad-cloud">
+        <img src="{{ site.image_path }}/try_cloud.svg" alt="Try ManageIQ in the Cloud" />
+      </div>
+      <div class="triad-title">Public Cloud</div>
+      <div class="triad-button">
+        <a href="/docs/get-started/cloud" class="btn btn-primary" onClick="ga('send', 'event', { eventCategory: 'Getting Started', eventAction: 'triadclick', eventLabel: 'Cloud', transport: 'beacon' });">
+          Try It!
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

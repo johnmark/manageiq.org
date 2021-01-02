@@ -1,0 +1,189 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+plugins:
+  - jekyll-coffeescript
+  - jekyll-assets
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jemoji
+
+# Site settings
+title: ManageIQ
+email: contact@manageiq.org
+# description: > # this means to ignore newlines until "baseurl:"
+#   Write an awesome description for your new site here. You can edit this
+#   line in _config.yml. It will appear in your document head meta (for
+#   Google search results) and in your feed.xml site description.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://manageiq.org" # the base hostname & protocol for your site
+twitter_username: manageiq
+github_username:  manageiq
+
+# Paths and such
+
+permalink: /blog/:year/:month/:title/
+paginate: 10
+paginate_path: "/blog/page:num/"
+
+image_path: "/assets/images/"
+book_path: https://manageiq.gitbook.io/mastering-cloudforms-automation-addendum/
+user_docs_path: "/docs/reference"
+
+markdown: kramdown
+
+exclude:
+  - data
+  - lib
+  - source
+  - create-post.rb
+  - Gemfile*
+  - Guardfile
+  - LICENSE.md
+  - README.md
+  - setup.sh
+  - "*.yaml"
+
+collections:
+  sprints:
+    permalink: /sprints/:name
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+
+  - scope:
+      path: ""
+      type: sprints
+    values:
+      layout: sprint
+
+  - scope:
+      path: "docs/get-started"
+      type: pages
+    values:
+      layout: doc_page
+      permalink: /:path/:basename
+      doc_group: start
+
+  - scope:
+      path: "docs/guides"
+      type: "pages"
+    values:
+      layout: doc_page
+      permalink: /:path/:basename
+      doc_group: dev
+
+  - scope:
+      path: "docs/reference/"
+      type: "pages"
+    values:
+      layout: doc_page
+      permalink: /:path/:basename
+      doc_group: user
+
+  - scope:
+      path: "docs/reference/latest"
+      type: "pages"
+    values:
+      layout: doc_page
+      permalink: /:path/:basename
+      doc_group: user
+
+  - scope:
+      path: "docs/reference/latest/api"
+    values:
+      layout: doc_page
+      doc_group: api
+
+  - scope:
+      path: "docs/reference/fine"
+      type: "pages"
+    values:
+      layout: doc_page
+      permalink: /:path/:basename
+      doc_group: user
+
+  - scope:
+      path: "docs/reference/fine/api"
+    values:
+      layout: doc_page
+      doc_group: api
+
+  - scope:
+      path: "docs/reference/euwe"
+      type: "pages"
+    values:
+      layout: doc_page
+      permalink: /:path/:basename
+      doc_group: user
+
+  - scope:
+      path: "docs/reference/euwe/api"
+    values:
+      layout: doc_page
+      doc_group: api
+
+  - scope:
+      path: "docs/reference/gaprindashvili"
+      type: "pages"
+    values:
+      layout: doc_page
+      permalink: /:path/:basename
+      doc_group: user
+
+  - scope:
+      path: "docs/reference/gaprindashvili/api"
+    values:
+      layout: doc_page
+      doc_group: api
+
+  - scope:
+      path: "docs/reference/hammer"
+      type: "pages"
+    values:
+      layout: doc_page
+      permalink: /:path/:basename
+      doc_group: user
+
+  - scope:
+      path: "docs/reference/hammer/api"
+    values:
+      layout: doc_page
+      doc_group: api
+
+  - scope:
+      path: "docs/reference/ivanchuk"
+      type: "pages"
+    values:
+      layout: doc_page
+      permalink: /:path/:basename
+      doc_group: user
+
+  - scope:
+      path: "docs/reference/ivanchuk/api"
+    values:
+      layout: doc_page
+      doc_group: api
+
+  - scope:
+      path: "docs/reference/jansa"
+      type: "pages"
+    values:
+      layout: doc_page
+      permalink: /:path/:basename
+      doc_group: user
+
+  - scope:
+      path: "docs/reference/jansa/api"
+    values:
+      layout: doc_page
+      doc_group: api

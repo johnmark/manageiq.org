@@ -1,0 +1,39 @@
+---
+layout: default
+---
+{% include docs/doc_tabs.html active=page.doc_group %}
+<div class="doc_container">
+  <div class="doc_menu">
+    {% if page.doc_group %}
+    {% include docs/{{page.doc_group}}_menu.html branch=page.branch %}
+    {% endif %}
+  </div>
+  <div class="doc_main">
+    <article class="doc {{ page.doc_group }}_doc">
+      {% if page.title %}
+      <header class="doc-header">
+        <h1 class="doc-title">{{ page.title }}</h1>
+      </header>
+      {% endif %}
+
+      <div class="{% if page.legacy %}legacy-{% endif %}doc-content">
+        {% if page.doc_group == "user" %}
+        <div class="doc-versions">
+          <span class="label">Versions: </span>
+          {% for path in page.branch_paths %}
+            <span{% if page.branch == path[0] %} class="active" {% endif %}>
+              <a href="{{ path[1] }}">
+                {{ path[0] | titleize }}
+              </a>
+            </span>
+            {% if forloop.last != true %}
+              <span class="separator">/</span>
+            {% endif %}
+          {% endfor %}
+        </div>
+        {% endif %}
+        {{ content }}
+      </div>
+    </article>
+  </div>
+</div>

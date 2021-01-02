@@ -1,0 +1,106 @@
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i,800,800i';
+
+body {
+  font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  line-height: 1.4;
+  color: $text-black;
+}
+
+a {
+  color: $link-blue;
+  padding-bottom: 0.01em;
+
+  &:hover {
+    color: lighten($link-blue, 10%);
+    text-decoration: none;
+  }
+
+  &:active {
+    text-decoration: none;
+  }
+}
+
+h1, h2, h3, h4 {
+  color: $grey-dark;
+  font-weight: 500;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern";
+  -webkit-font-feature-settings: "kern";
+  -moz-font-feature-settings: "kern";
+  -moz-font-feature-settings: "kern=1";
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 16px;
+  line-height: 1.4;
+  margin: 1.4em 0;
+}
+
+h3 {
+  font-size: 14px;
+}
+
+h4 {
+  font-size: 12px;
+}
+
+.section-title {
+  text-align: center;
+  margin: 0 0 2em;
+}
+
+table {
+  font-size: 14px;
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 2em;
+}
+
+tr:nth-child(odd) td {
+  background-color: darken($site-bg, 4%);
+}
+
+td, th {
+  padding: 0.5em;
+}
+
+th {
+  border-bottom: 1px solid $heading-line;
+}
+
+ul {
+  margin: 0 0 1em 0;
+}
+
+li {
+  margin-bottom: 1em;
+}
+
+@media only screen and (min-width: #{$bp-desk0}) {
+  h1 {
+    font-size: 42px;
+  }
+
+  h2 {
+    font-size: 30px;
+    line-height: 1.4;
+    margin: 1.4em 0;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  h4 {
+    font-size: 18px;
+  }
+
+  .section-title {
+    font-size: 20px;
+  }
+}

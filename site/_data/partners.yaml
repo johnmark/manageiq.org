@@ -1,0 +1,58 @@
+# Red Hat
+# IBM
+# Booz Allen Hamilton
+# Produban
+# Logicalis
+# Google
+# BEEVA
+# Near Technologies
+# Nuage Networks
+# Cox Automotive
+
+- name: Red_Hat
+  width: 140
+  url: "http://redhat.com/"
+
+- name: IBM
+  width: 120
+  url: "http://ibm.com/"
+
+- name: Booz_Allen_Hamilton
+  width: 260
+  url: "http://boozallen.com/"
+
+- name: Produban
+  width: 160
+  url: "http://www.produban.com/"
+
+- name: Lenovo_XClarity
+  width: 110
+  url: "http://www.lenovo.com/"
+
+- name: Logicalis
+  width: 180
+  url: "http://www.us.logicalis.com/"
+
+- name: Google
+  width: 140
+  url: "https://www.google.com"
+
+- name: BBVA
+  width: 100
+  url: "https://www.bbva.com/"
+
+- name: Near_Technologies
+  width: 150
+  url: "http://www.neartechnologies.com/"
+
+- name: Nuage
+  width: 210
+  url: "http://www.nuagenetworks.net/"
+
+- name: Cox_Automotive
+  width: 233
+  url: "http://www.coxautoinc.com/"
+
+- name: Xlab
+  width: 190
+  url: "http://www.xlab.si/"
